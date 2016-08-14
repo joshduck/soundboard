@@ -1,0 +1,41 @@
+﻿.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  /* Pointer events doesn't work correctly in Metro, 
+     but scaling to 0, 0 does. */
+  pointer-events: none;
+  display: block;
+}
+
+.overlay.visible-in-end {
+  pointer-events: all;
+}
+
+.overlay-image {
+  background: black no-repeat 50% 50%;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+  -webkit-transform: scale(0.25, 0.25);
+  transform: scale(0.25, 0.25);
+}
+
+.overlay.visible-in-start .overlay-image,
+.overlay.visible-in-end .overlay-image {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.overlay.visible-out-end {
+  display: none;
+}

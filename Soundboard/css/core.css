@@ -1,0 +1,17 @@
+﻿/* http://colorschemedesigner.com/#2Q31Tw0w0w0w0 */
+html, body { 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -ms-touch-action: none; /* Don't try and zoom, etc. */
+}
+
+body { 
+  background: #08900b !important;
+  -ms-touch-action: none;
+}
+
+audio {
+  z-index: 1000;
+  position: fixed;
+}
